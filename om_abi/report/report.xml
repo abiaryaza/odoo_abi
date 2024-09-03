@@ -3,8 +3,8 @@
         <field name="name">Patient Details</field>
         <field name="model">hospital.patient</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.report_patient_detail</field>
-        <field name="report_file">om_hospital.report_patient_detail</field>
+        <field name="report_name">om_abi.report_patient_detail</field>
+        <field name="report_file">om_abi.report_patient_detail</field>
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>
@@ -12,8 +12,8 @@
         <field name="name">Patient Card</field>
         <field name="model">hospital.patient</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.report_patient_id_card</field>
-        <field name="report_file">om_hospital.report_patient_id_card</field>
+        <field name="report_name">om_abi.report_patient_id_card</field>
+        <field name="report_file">om_abi.report_patient_id_card</field>
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>
@@ -21,8 +21,8 @@
         <field name="name">Patient Card2</field>
         <field name="model">hospital.patient</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.report_patient_id_card2</field>
-        <field name="report_file">om_hospital.report_patient_id_card2</field>
+        <field name="report_name">om_abi.report_patient_id_card2</field>
+        <field name="report_file">om_abi.report_patient_id_card2</field>
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>
@@ -31,8 +31,8 @@
         <field name="name">Appointment Details</field>
         <field name="model">hospital.appointment</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.report_appointment_detail</field>
-        <field name="report_file">om_hospital.report_appointment_detail</field>
+        <field name="report_name">om_abi.report_appointment_detail</field>
+        <field name="report_file">om_abi.report_appointment_detail</field>
         <field name="binding_model_id" ref="model_hospital_appointment"/>
         <field name="binding_type">report</field>
     </record>
@@ -41,8 +41,8 @@
 <!--        <field name="name">Surat Sakit</field>-->
 <!--        <field name="model">hms.appointment</field>-->
 <!--        <field name="report_type">qweb-pdf</field>-->
-<!--        <field name="report_name">om_hospital.surat_sakit_template</field>-->
-<!--        <field name="report_file">om_hospital.surat_sakit_template</field>-->
+<!--        <field name="report_name">om_abi.surat_sakit_template</field>-->
+<!--        <field name="report_file">om_abi.surat_sakit_template</field>-->
 <!--        <field name="binding_model_id" ref="model_hms_appointment"/>-->
 <!--        <field name="binding_type">report</field>-->
 <!--    </record>-->
@@ -79,10 +79,10 @@
         <field name="name">Surat Sakit</field>
         <field name="model">create.suratsakit.wizard</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.surat_sakit_template</field>
-        <field name="report_file">om_hospital.surat_sakit_template</field>
+        <field name="report_name">om_abi.surat_sakit_template</field>
+        <field name="report_file">om_abi.surat_sakit_template</field>
         <field name="binding_model_id" ref="model_create_suratsakit_wizard"/>
-        <field name="paperformat_id" ref="om_hospital.surat_sakit_paperformat"/>
+        <field name="paperformat_id" ref="om_abi.surat_sakit_paperformat"/>
         <field name="binding_type">report</field>
     </record>
 
@@ -90,10 +90,10 @@
         <field name="name">Surat Sehat</field>
         <field name="model">create.suratsehat.wizard</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">om_hospital.surat_sehat_template</field>
-        <field name="report_file">om_hospital.surat_sehat_template</field>
+        <field name="report_name">om_abi.surat_sehat_template</field>
+        <field name="report_file">om_abi.surat_sehat_template</field>
         <field name="binding_model_id" ref="model_create_suratsehat_wizard"/>
-        <field name="paperformat_id" ref="om_hospital.surat_sehat_paperformat"/>
+        <field name="paperformat_id" ref="om_abi.surat_sehat_paperformat"/>
         <field name="binding_type">report</field>
     </record>
 
@@ -104,8 +104,8 @@
         <field name="name">Patient Card Excel</field>
         <field name="model">hospital.patient</field>
         <field name="report_type">xlsx</field>
-        <field name="report_name">om_hospital.report_patient_id_card_xls</field>
-        <field name="report_file">om_hospital.report_patient_id_card_xls</field>
+        <field name="report_name">om_abi.report_patient_id_card_xls</field>
+        <field name="report_file">om_abi.report_patient_id_card_xls</field>
         <field name="binding_model_id" ref="model_hospital_patient"/>
         <field name="binding_type">report</field>
     </record>

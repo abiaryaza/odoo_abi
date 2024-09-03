@@ -31,15 +31,15 @@ class CreateAppointmentWiz(models.TransientModel):
 
     def action_view_appointment(self):
         # metode 1
-        # action = self.env.ref('om_hospital.action_hospital_appointment').read()[0]
+        # action = self.env.ref('om_abi.action_hospital_appointment').read()[0]
         # action['domain'] = [('patient_id', '=', self.patient_id.id)]
         # return action
         #metode 2
-        # action = self.env["ir.actions.actions"]._for_xml_id('om_hospital.action_hospital_appointment')
+        # action = self.env["ir.actions.actions"]._for_xml_id('om_abi.action_hospital_appointment')
         # action['domain'] = [('patient_id', '=', self.patient_id.id)]
         # return action
         # metode 3
-        # action = self.env.ref('om_hospital.action_hospital_appointment').read()[0]
+        # action = self.env.ref('om_abi.action_hospital_appointment').read()[0]
         # action['domain'] = [('patient_id', '=', self.patient_id.id)]
         return {
             'name': 'Appointments',

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+om_rumahsakit.access_hospital_pasien,access_hospital_pasien,om_rumahsakit.model_hospital_pasien,base.group_user,1,1,1,1

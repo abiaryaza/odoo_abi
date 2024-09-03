@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_order_form_inherit" model="ir.ui.view">
+        <field name="name">hms.patient.inherited</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="jalak_hms.view_patient_form"/>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="print_report" string="Cetak" type="object" states="draft,confirm"/>
+                </header>
+            </form>
+            <field name="allergy_ids" position="after">
+                <field name="health_description"/>
+            </field>
+
+        </field>
+    </record>
+
+<!--    <record id="view_order_tree_inherit" model="ir.ui.view">-->
+<!--        <field name="name">hms.patient.inherited</field>-->
+<!--        <field name="model">sale.order</field>-->
+<!--        <field name="inherit_id" ref="sale.view_quotation_tree"/>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <field name="partner_id" position="after">-->
+<!--                <field name="sale_description"/>-->
+<!--            </field>-->
+<!--        </field>-->
+<!--    </record>-->
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_appointment_form_inherit" model="ir.ui.view">
+        <field name="name">hms.appointment.inherited</field>
+        <field name="model">hms.appointment</field>
+        <field name="inherit_id" ref="jalak_hms.view_hms_appointment_form"/>
+        <field name="arch" type="xml">
+            <field name="medical_history" position="after">
+                <field name="health_desc"/>
+                <field name="street"/>
+            </field>
+            <xpath expr="//header/button[@name='action_pause']" position="after">
+                <button name="%(om_hospital.action_create_surat_sakit_form)d" type="action" string="Surat Sakit"  states="in_consultation"/>
+                <button name="%(om_hospital.action_create_surat_sehat_form)d" type="action" string="Surat Sehat"  states="in_consultation"/>
+<!--                <button name="suratsakit" type="object" string="Surat Sakit"  states="in_consultation"/>-->
+        </xpath>
+        </field>
+    </record>
+</odoo>

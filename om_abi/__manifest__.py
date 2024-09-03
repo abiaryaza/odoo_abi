@@ -6,7 +6,7 @@
     'depends': ['mail', 'sale', 'report_xlsx', 'jalak_hms_base', 'jalak_hms'],
 # 'assets': {
 #     'web.assets_backend': [
-#         'dev/om_hospital/static/src/css/appointment_style.css',
+#         'dev/om_abi/static/src/css/appointment_style.css',
 #     ]},
     'data': [
         'security/ir.model.access.csv',

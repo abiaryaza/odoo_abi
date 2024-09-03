@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_baru_root"
+              name="Baru"
+              sequence="9"/>
+
+    <menuitem id="menu_hospital_operasi"
+              name="Operations"
+              parent='menu_baru_root'
+              sequence="10"/>
+</odoo>

@@ -1,0 +1,172 @@
+<odoo>
+
+    <template id="surat_sakit_template">
+        <t t-call="web.html_container">
+            <t t-set="doc" t-value="doc"/>
+            <t t-foreach="docs" t-as="o">
+                <div style="font-family: Arial, sans-serif; width: 100%; ">
+                    <!--                    margin: 0 auto;-->
+                    <!-- Header Section -->
+                    <div class="header"
+                         style="font-family: Arial, sans-serif;text-align: center; font-size: 18px; font-weight: bold;">
+                        <!--                        <div style="text-align: center; font-size: 16px; font-weight: bold;">-->
+                        <div style="font-size: 36px;">
+                            <p>alaska</p>
+                        </div>
+                        <p>Alamat :
+                            <span t-field="o.physician_street"/>
+                            <span t-field="o.physician_city"/>
+                            <span t-field="o.physician_state_id"/>
+                            <span t-field="o.physician_zip"/>
+                        </p>
+                        <p>Telp:
+                            <span t-field="o.physician_phone"/>
+                            | E-mail:
+                            <span t-field="o.physician_email"/>
+                        </p>
+                        <!--                        </div>-->
+                    </div>
+
+
+                    <div class="article o_report_layout_standard">
+                        <hr style="border: 1px solid black;"/>
+                        <div style="text-align: right; font-size: 18px;">
+                            <span>No:</span>
+                            <span t-field="o.name"/>
+                        </div>
+
+                        <!-- Title Section -->
+                        <div style="font-family: Arial, sans-serif; text-align: center; font-size: 24px; font-weight: bold; ">
+                            <!--                            margin-top: 16px;-->
+                            <u>Surat Keterangan Sakit</u>
+                        </div>
+
+                        <!-- Body Section -->
+                        <div style="margin-top: 18px;">
+                            <p>Yang bertanda tangan di bawah ini dokter<span t-field="o.physician_id"/>
+                            </p>
+                            <p>Menerangkan Dengan Sesungguhnya Bahwa:</p>
+                            <table style="border-collapse: collapse; text-align:left">
+                                <tr>
+                                    <td style="border: 0px solid black;padding-left: 15px; width:125px;">
+                                        Nama
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td style="border: 0px solid black;">
+                                        <span t-field="o.patient_id"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 0px solid black; padding-left: 15px; width:125px;">
+                                            Jenis Kelamin
+                                    </td>
+                                    <td style="width:10px;">
+                                            :
+                                    </td>
+                                    <td style="border: 0px solid black;">
+                                        <span t-field="o.gender"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 0px solid black;padding-left: 15px; width:125px;">
+                                        Umur
+                                    </td>
+                                    <td>
+                                        :
+                                    </td>
+                                    <td style="border: 0px solid black;">
+                                        <span t-field="o.age"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 0px solid black;padding-left: 15px; width:125px; ">
+                                            Pekerjaan
+                                    </td>
+                                    <td>
+                                        <span>
+                                            :
+                                        </span>
+                                    </td>
+                                    <td style="border: 0px solid black;">
+                                        <span t-field="o.occupation"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="border: 0px solid black;padding-left: 15px; width:125px;">
+                                            Alamat
+                                    </td>
+                                    <td>
+                                            :
+                                    </td>
+                                    <td style="border: 0px solid black;">
+                                        <span t-field="o.street"/>
+                                        <span t-field="o.city"/>
+                                        <span t-field="o.state_id"/>
+                                        <span t-field="o.zip"/>
+                                        <span t-field="o.country_id"/>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--                            <p>Nama:-->
+                            <!--                                <span t-field="o.patient_id"/>-->
+                            <!--                            </p>-->
+                            <!--                            <p>Jenis Kelamin:-->
+                            <!--                                <span t-field="o.gender"/>-->
+                            <!--                            </p>-->
+                            <!--                            <p>Umur:-->
+                            <!--                                <span t-field="o.age"/>-->
+                            <!--                            </p>-->
+                            <!--                            <p>Pekerjaan:-->
+                            <!--                                <span t-field="o.occupation"/>-->
+                            <!--                            </p>-->
+                            <!--                            <p>Alamat :-->
+                            <!--                                <span t-field="o.street"/>-->
+                            <!--                                <span t-field="o.city"/>-->
+                            <!--                                <span t-field="o.state_id"/>-->
+                            <!--                                <span t-field="o.zip"/>-->
+                            <!--                                <span t-field="o.country_id"/>-->
+                            <!--                            </p>-->
+
+                            <p>Benar telah diperiksa dan dinyatakan pada saat ini dalam keadaan sakit dan memerlukan
+                                istirahat selama
+                                <span t-esc="form_data.get('sick_day')"/>
+                                Hari.
+                            </p>
+                            <p>Surat Keterangan Sehat ini dibuat untuk dapat dipergunakan untuk
+                                <span t-esc="form_data.get('needed')"/>.
+                            </p>
+                        </div>
+
+
+                        <!-- Footer Section -->
+                        <div style="text-align: right; margin-top: 50px;">
+                            <p>
+                                <span t-field="o.date" t-options='{"format": "dd MMMM yyyy"}'/>
+                            </p>
+                            <p>Dokter Pemeriksa</p>
+                            <!--                    <p><span t-field="o.signature" t-options="{'widget': 'image', 'class': 'img-rounded', 'style':'max-height: 100px !important'}"/>-->
+                            <!--                    </p>-->
+                            <!--                    <img t-attf-src="data:image/svg;base64,{{'o.signature'}}"/>-->
+                            <img t-att-src="image_data_uri(o.signature)" style="max-height: 50px;" alt="Signature"/>
+                            <!--                    <p><span t-field="o.signature"/></p>-->
+                            <p style="font-weight: bold;">
+                                <span t-field="o.physician_id"/>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Powered By Section -->
+                    <div class="footer o_standard_footer">
+                        <hr style="border: 1px solid black;"/>
+                        <div style="text-align: left; font-size: 10px; margin-top: 16px;">
+                            <p>Powered By ASRI</p>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

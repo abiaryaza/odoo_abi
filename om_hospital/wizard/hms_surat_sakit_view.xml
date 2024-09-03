@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_create_surat_sakit_form" model="ir.ui.view">
+        <field name="name">create.suratsakit.wizard.form</field>
+        <field name="model">create.suratsakit.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Surat Sakit">
+                <group>
+<!--                    <field name="state" invisible="1"/>-->
+                    <field name="name"/>
+                    <field name="patient_id"/>
+                    <field name="sick_day"/>
+                    <field name="needed"/>
+                </group>
+                <footer>
+                    <button name="action_create_suratsakit" type="object" string="Create" class="btn-primary"/>
+<!--                    <button name="action_view_appointment" type="object" string="View Appointment"/>-->
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_create_surat_sakit_form" model="ir.actions.act_window">
+        <field name="name">Surat Sakit</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">create.suratsakit.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_create_surat_sakit_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

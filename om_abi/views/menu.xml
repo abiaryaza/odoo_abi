@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_hospital_root"
+              name="Hospital"
+              web_icon="om_abi,static/icon1.png"
+              sequence="10"/>
+
+    <menuitem id="menu_hospital_operations"
+              name="Operations"
+              parent='menu_hospital_root'
+              sequence="10"/>
+
+    <menuitem id="menu_hospital_master"
+              name="Master Data"
+              parent='menu_hospital_root'
+              sequence="20"/>
+
+    <menuitem id="menu_hospital_appointment"
+              name="Appointment"
+              parent='menu_hospital_root'
+              sequence="30"/>
+
+    <!--    <menuitem id="menu_patients"-->
+    <!--              name="Patients"-->
+    <!--              parent="menu_hospital_operations"-->
+    <!--              sequence="10"/>-->
+
+</odoo>
